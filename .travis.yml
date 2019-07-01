@@ -1,9 +1,8 @@
-language: generic
 sudo: required
 services:
   - docker
 
-before_installs:
+before_install:
   - docker build -t luckytintinnz/docker-react -f Dockerfile.dev .
 
 script:
