@@ -10,5 +10,6 @@ COPY . .
 RUN npm run build
 
 #  fetch nginx and copy over build files
-FROM nginx 
+FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
